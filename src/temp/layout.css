@@ -1,0 +1,57 @@
+.fix_nav {
+    position:fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    font-size: 14px;
+    color: #2274ac;
+}
+
+.fix_nav .title {
+    cursor: pointer;
+    text-align: right;
+}
+.fix_nav .title span {
+    display: inline-block;
+    padding: 5px 10px;
+    background:  #ccc;
+}
+
+.fix_nav .hidden_nav {
+    display: none;
+    white-space: nowrap;
+    padding: 5px 10px 10px;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.fix_nav .hidden_nav_col {
+    float: left;
+}
+.fix_nav .hidden_nav_col+.hidden_nav_col {
+    margin-left: 40px;
+}
+
+.fix_nav ul {
+    margin: 0;
+}
+
+.fix_nav .hidden_nav a {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+
+.verstka_comment {
+    background: #fff5b4;
+    display: inline-block;
+}
+
+.icons_layout .icon {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.format_layout .catalogue_format {
+    margin-right: 20px;
+}

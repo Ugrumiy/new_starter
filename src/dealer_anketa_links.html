@@ -1,0 +1,82 @@
+@@include('template/head.html', { "title": "Личный профиль" })
+
+@@include('template/header.html')
+
+
+
+<article class="main_content">
+
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        @@include('template/breads.html')
+
+        
+        <div class="tabs_wrap light_tabs">
+            <a href="#" class="tabs_item js_tabs"><span class="title">Личный кабинет</span></a>
+            <a href="#" class="tabs_item js_tabs active"><span class="title">Анкета дилера</span></a>
+        </div>
+
+        <div class="tab_content_wrapper">
+            <div class="tabs_wrap subtabs">
+                <a href="#" class="tabs_item js_tabs"><span class="title">Общее</span></a>
+                <a href="#" class="tabs_item js_tabs"><span class="title">Услуги</span></a>
+                <a href="#" class="tabs_item js_tabs active"><span class="title">Ссылки</span></a>
+                <a href="#" class="tabs_item js_tabs"><span class="title">Отделы</span></a>
+            </div>
+
+            <div class="tab_content_block">
+        
+                <p>Укажите ссылки на целевые формы с вашего дилерского сайта VW NFZ.</p>
+
+                <div class="form_wrapper medium_form">
+                    <form action="">
+                        <div class="form_field">
+                            <div class="field_title">Запрос предложения</div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_medium" value="http://www.marketing.vw-nfz.ru/_admin/">
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Запись на тест-драйв</div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_medium">
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Запись на сервис</div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_medium">
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Обратная связь</div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_medium">
+                            </div>
+                        </div>
+                        
+                        <div class="form_field pull_left btns_wrap">
+                            <input type="submit" class="theme_btn" value="Сохранить">
+                            <input type="submit" class="theme_btn_light" value="Отмена">
+                        </div><!-- /form_field -->
+
+                    </form>
+                </div>
+            
+            </div><!-- /tab_content_block -->
+        </div><!-- /tab_content_wrapper -->
+
+    </div><!--/content_block -->
+
+</article><!--/main_content -->
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')

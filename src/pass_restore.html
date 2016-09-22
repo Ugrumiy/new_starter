@@ -1,0 +1,52 @@
+@@include('template/head.html', { "title": "Восстановление пароля" })
+@@include('template/header_login.html')
+
+
+
+<article class="main_content login_page_back">
+    
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        <div class="back_form_wrapper">
+            <h1>Восстановление пароля</h1>
+
+            <div class="form_wrapper">
+                <form action="">
+                    <div class="form_field error"><!-- add class 'error' to show errors -->
+                        <div class="field_title">Логин</div>
+                        <div class="field_elem">
+                            <input type="text" class="inp_txt field_small" value="TestDealer">
+                            <div class="error_txt">Для Вашей учётной записи email не установлен. <br>Пожалуйста, обратитесь к региональному менеджеру для восстановления пароля.</div>
+                        </div>
+                    </div><!-- /form_field -->
+                    <div class="form_field pull_left btns_wrap">
+                        <input type="submit" class="theme_btn" value="Отправить">
+                        <a href="#" class="nav_link">Вернуться</a>
+                    </div><!-- /form_field -->
+                </form>
+            </div>
+        </div><!-- /back_form_wrapper -->
+
+    </div><!--/inside_wrapper -->
+
+
+
+</article><!--/main_content -->
+
+
+
+
+
+
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')
+       

@@ -1,0 +1,54 @@
+        <!-- HEADER BLOCK -->
+        <header class="header_wrapper">
+            <div class="inside_wrapper wide">
+                <a href="#" class="main_logo"></a>
+                <div class="header_icons_btn_wrap">
+                    <div class="header_icon_btn btn_add">
+                        <svg class="icon icon_plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#add_btn_top_svg"></use></svg>
+                       <span>Добавить</span>
+                    </div>
+                    <div class="header_icon_btn btn_profile">
+                        <svg class="icon profile_sk"><use xlink:href="resources/img/sprite.svg#Profile_sk"></use></svg>
+                    </div>
+                    <div class="header_icon_btn btn_favorites">
+                        <span class="header_btn_counter">10</span>
+                        <svg class="icon favorites_sk"><use xlink:href="resources/img/sprite.svg#Favorites_sk"></use></svg>
+                    </div>                    
+                    <div class="header_icon_btn btn_notifications">
+                        <span class="header_btn_counter">5</span>
+                        <svg class="icon notifications_sk"><use xlink:href="resources/img/sprite.svg#Alert_sk"></use></svg>
+                    </div>                   
+                     <div class="header_icon_btn btn_search js_filter_toggler">
+                        <svg class="icon search_sk"><use xlink:href="resources/img/sprite.svg#Search_sk"></use></svg>
+                    </div>
+                </div>
+                <div class="header_menu_wrapper">
+                    <nav class="main_menu">
+                        <ul class="ul_simple list_wrapper">
+                            <li class="list_item"><a href="#" class="link_item active">Маркетинг</a></li>
+                            <li class="list_item"><a href="#" class="link_item">Продажи</a></li>
+                            <li class="list_item"><a href="#" class="link_item">Команда</a></li>
+                            <li class="list_item"><a href="#" class="link_item">Сервис</a></li>
+                            <li class="list_item"><a href="#" class="link_item">Контакты</a></li>
+                            <li class="list_item"><a href="#" class="link_item">Администрирование</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="submenu_wrap">
+                    <ul class="submenu_list ul_simple" id="profile">
+                        <li class="list_item">
+                            <a href="#" class="link_item"><svg class="icon sub_lk"><use xlink:href="img/sprite.svg#sub_lk"></use></svg>профиль</a>
+                        </li>
+                        <li class="list_item">
+                            <a href="#" class="link_item"><svg class="icon sub_logout"><use xlink:href="img/sprite.svg#sub_logout"></use></svg>выйти</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header><!-- /header_wrapper -->
+
+
+        @@include('filter.html')
+
+       

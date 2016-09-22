@@ -1,0 +1,59 @@
+@@include('template/head.html', { "title": "Личный профиль" })
+
+@@include('template/header.html')
+
+
+
+<article class="main_content">
+
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        @@include('template/breads.html')
+
+        <h1>Пользователь 0934</h1>
+        <div class="header_link"><a href="#">Вернуться к списку пользователей</a></div>
+
+        <div class="info_block">
+            <div class="title_item">Константинопольский Константин Константинович</div>
+            <div class="info_item">konstantinopolsky.konstantin@veryhotnail.com</div>
+            <div class="info_item">+7 (965) 673-33-90945</div>
+            <div class="info_item">День рождения: 10.06.1982</div>
+            <div class="info_item">Зарегистрирован: 27.06.2014</div>
+            <div class="info_item">Последний вход: 21.09.2014</div>
+        </div>
+        <div class="info_block">
+            <div class="title_item">Информация о должности и месте работы</div>
+            <div class="info_item">Тип организации: Агентство</div>
+            <div class="info_item">Журнал “Автомастер – движение нового времени”</div>
+            <div class="info_item">Отдел основных видов деятельности</div>
+            <div class="info_item">Заведующий отделом по основным направлениям деятельности</div>
+            <div class="info_item">Контакт в импортере: Константрнопольский Константин</div>
+        </div>
+        <div class="info_block">
+            <div class="title_item">Адрес для доставки корреспонденции</div>
+            <div class="info_item">Россия, Москва, 109387</div>
+            <div class="info_item">ул. Шарикоподшипниковская, д. 132, корпус 4, подъезд 9, офисное помещение 67</div>
+
+        </div>
+        <div class="btns_wrap">
+            <div class="form_field field_large">
+                <textarea class="inp_textarea" placeholder="Укажите причину удаления пользователя"></textarea>
+            </div>
+            <a href="#" class="theme_btn_refuse">Подтвердить удаление</a>
+            <a href="#" class="theme_btn_light">Отмена</a>
+        </div>
+
+    </div><!--/content_block -->
+
+</article><!--/main_content -->
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')

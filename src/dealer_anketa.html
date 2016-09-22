@@ -1,0 +1,140 @@
+@@include('template/head.html', { "title": "Анкета дилера: общее" })
+
+@@include('template/header.html')
+
+
+
+<article class="main_content">
+
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        @@include('template/breads.html')
+
+        
+        <div class="tabs_wrap light_tabs">
+            <a href="#" class="tabs_item js_tabs"><span class="title">Личный кабинет</span></a>
+            <a href="#" class="tabs_item js_tabs active"><span class="title">Анкета дилера</span></a>
+        </div>
+
+        <div class="tab_content_wrapper">
+            <div class="tabs_wrap subtabs">
+                <a href="#" class="tabs_item js_tabs active"><span class="title">Общее</span></a>
+                <a href="#" class="tabs_item js_tabs"><span class="title">Услуги</span></a>
+                <a href="#" class="tabs_item js_tabs"><span class="title">Ссылки</span></a>
+                <a href="#" class="tabs_item js_tabs"><span class="title">Отделы</span></a>
+            </div>
+        
+            <div class="message_block alarm">
+                <div class="inside_wrapper">
+                    <svg class="icon icon_info">
+                        <use xlink:href="resources/img/sprite.svg#Info">
+                    </svg> 
+                    <span class="message_text">У вас есть неподтвержденные поля в разделах „Регистрационная информация“ и „Информация о месте работы“.</span>
+                </div>
+            </div>
+
+            <div class="tab_content_block">
+                
+                <p>Основная информация о дилерском центре (недоступная для редактирования) редактируются представителем Импортера. При необходимости, отправьте запрос на актуализацию этих данных с помощью <a href="#">формы обратной связи</a>.</p>
+
+                <div class="form_wrapper">
+                    <form action="">
+                        <div class="form_field">
+                            <div class="field_title">Номер дилера <br>(без RUSV)</div>
+                            <div class="field_elem txt_field">3492</div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Наименование дилера (Торговое)</div>
+                            <div class="field_elem txt_field">ООО “Автомир ФВ”</div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Город</div>
+                            <div class="field_elem txt_field">Москва</div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Индекс</div>
+                            <div class="field_elem txt_field">127022</div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Улица</div>
+                            <div class="field_elem txt_field">Авиационная</div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Широта</div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_super_small" value="55.7149">
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Долгота</div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_super_small" value="37.7161">
+                            </div>
+                        </div>
+                        <div class="form_field pull_left btns_wrap">
+                            <a href="#" class="theme_btn_light">Определить координаты</a>
+                            <a href="#" class="theme_btn_light">Проверить координаты на карте</a>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Дополнительная информация как добраться</div>
+                            <div class="field_elem">
+                                <textarea class="inp_textarea field_large"></textarea>
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Ссылка на сайт дилера&nbsp;<span class="require">*</span></div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_medium">
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Основной телефон&nbsp;<span class="require">*</span></div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_small">
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Основной E-mail&nbsp;<span class="require">*</span></div>
+                            <div class="field_elem">
+                                <input type="text" class="inp_txt field_medium">
+                            </div>
+                        </div>
+                        <div class="form_field">
+                            <div class="field_title">Дополнительное описание дилера</div>
+                            <div class="field_elem">
+                                <textarea class="inp_textarea field_large"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form_field pull_left">
+                            <div class="field_title auto_width"><span class="require">*</span> - Поля, обязательные для заполнения</div>
+                        </div><!-- /form_field -->
+
+                        <div class="form_field pull_left btns_wrap">
+                            <input type="submit" class="theme_btn" value="Сохранить">
+                            <input type="submit" class="theme_btn_light" value="Отмена">
+                        </div><!-- /form_field -->
+
+                        
+
+                    </form>
+                </div><!-- /form_wrapper -->
+
+            </div><!-- /tab_content_block -->
+        </div><!-- /tab_content_wrapper -->
+
+
+    </div><!--/content_block -->
+
+</article><!--/main_content -->
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')

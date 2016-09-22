@@ -1,0 +1,65 @@
+$container: 100%;
+$catalogue_columns: 10;
+$gap: 20px;
+
+$column_width: $container/$catalogue_columns;
+
+
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+.catalogue_container_#{$catalogue_columns}
+{
+    width: if($container == 100% , auto , $container);
+    position:relative;
+    margin-left:-$gap/2 !important;
+    margin-right:-$gap/2 !important;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+
+[class*="catalogue_grid_"] {
+    display: inline;
+    float: left;
+    padding-left: $gap/2;
+    padding-right: $gap/2;
+    position:relative;
+    min-height: 1px;
+ -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+     box-sizing:border-box;
+}
+
+
+@for $i from 1 through $catalogue_columns {
+.catalogue_grid_#{$i} { width: $column_width * $i }
+}
+@for $i from 1 to $catalogue_columns {
+.catalogue_prefix_#{$i} { margin-left: $column_width * $i }
+}
+@for $i from 1 to $catalogue_columns {
+.catalogue_suffix_#{$i} { margin-right: $column_width * $i }
+}
+@for $i from 1 to $catalogue_columns {
+.catalogue_push_#{$i} { left: $column_width * $i  }
+}
+@for $i from 1 to $catalogue_columns {
+.catalogue_pull_#{$i} { left: - ($column_width * $i ) }
+}
+
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+.catalogue_container_#{$catalogue_columns}:before,
+.catalogue_container_#{$catalogue_columns}:after {
+    content: ' ';
+    display: table;
+}
+
+.catalogue_container_#{$catalogue_columns}:after {
+    clear: both;
+}
+
+
+

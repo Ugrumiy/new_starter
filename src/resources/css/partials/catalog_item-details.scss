@@ -1,0 +1,225 @@
+.catalog_item-details{
+	.catalog_item-details_gallery{
+		.gallery_container{
+		}
+		.gallery_main-img{
+			width: 460px;
+			height: 306px;
+			overflow: hidden;
+		}
+		.gallery_support-imgs{
+
+		}
+		.support-img_item{
+			position: relative;
+			width: 228px;
+			height: 152px;
+			float: left;
+			margin: 4px 4px 0 0;
+			&:nth-child(2n){
+				margin-right: 0;
+			}
+		}
+		.support-img_overlay{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			font-size: 22px;
+			line-height: 152px;
+			font-weight: 600;
+			color: #ffffff;
+			text-align: center;
+			&:link,&:visited,&:hover,&:active{
+				color: #ffffff;
+			}
+			&.view_item{
+				background: none;
+				@include trs;
+				.icon{
+					width: 24px;
+					height: 17px;
+					fill: #ffffff;
+					opacity: 0;
+					transition: opacity $duration;
+				}
+				&:hover{
+					background: transparentize($primary_color, 0.6);
+					.icon{
+						opacity: 1,
+					}
+				}
+			}
+			&.show_more{
+				background-color: rgba(0,0,0,0.6);
+			}
+		}
+		.tags_container{
+			font-size: 0;
+		}
+		.tags_item{
+			@include trs;
+			font-size: 14px;
+			display: inline-block;
+			padding: 5px 13px;
+			margin: 0 6px 6px 0;
+			color: $primary_color;
+			border-radius: 30px;
+			border: 1px solid $layout_color_light;
+			cursor: pointer;
+			&:hover{
+				background: $primary_color;
+				border: 1px solid $primary_color;
+				color: $back_color;
+			}
+		}
+	}
+	.catalog_item-details_info{
+		position: relative;
+		.action_icons_wrap{
+			position: absolute;
+			top: 0;
+			right: 10px;
+		}
+		.image_info{
+			margin-top: 34px;
+			margin-bottom: 73px;
+			div{
+				color: $txt-color_dark;
+				margin: 12px 0;
+			}
+			.title{
+			    display: inline-block;
+				min-width: 104px;
+				color: #777777;
+			}
+		}
+	}
+	.reply-item{
+		border-bottom: 1px solid $layout_color_light;
+		padding: 25px 0 19px 0;
+		position: relative;
+		.reply_make-quote{
+			@include trs;
+			position: absolute;
+		    top: 27px;
+		    right: 3px;
+		    padding: 6px 7px;
+			border: 1px solid $layout_color_light;
+			border-radius: $radius;
+			cursor: pointer;
+			.icon{
+				fill: $layout_color_dark;
+			}
+			&:hover{
+				background-color: $primary_color;
+				.icon{
+					fill: $back_color;
+				}
+			}
+		}
+		.reply_date{
+			display: inline-block;
+			font-size: 12px;
+			color: #777777;
+			border-radius: $radius;
+			margin-bottom: 5px;
+			&.quoted{
+				background-color: $input_error_color;
+				padding: 5px 9px 3px 9px;
+			    margin-bottom: 7px;
+			}
+		}
+		.reply_person-info{
+			color: $txt-color_dark;
+			font-weight: 700;
+			.marker{
+				margin: 0 5px;
+			}
+		}
+		.reply_text{
+			margin-top: 16px;
+			color: #333333;
+			line-height: 22px;
+		}
+		.reply_quotation{
+			border: 1px solid $layout_color_light;
+			margin-top: 20px;
+    		padding: 10px 15px 15px 15px;
+			border-radius: $radius;
+			color: #777777;
+			line-height: 22px;
+		}
+        .quotation_author{
+        	font-weight: 700;
+    	    margin-bottom: 6px;
+        }
+        .quotation_text{
+        }
+       	.attached-items{
+       		list-style: none;
+       		padding: 0px 0px 0px 20px;
+       		margin: 15px 0px 0px 0px;
+       		li{
+	       		position: relative;
+       			padding: 3px 0;
+       		}
+       		.icon{
+       			fill: #bbbbbb;
+       			position: absolute;
+       			top: 1px;
+       			left: -20px;
+       			height: 16px;
+       			width: 16px;
+       		}
+       		&:hover .icon{
+       			fill: $primary_color_hover;
+       		}
+       	}
+	}
+	.download_btns{
+		margin-bottom: 40px;
+	}
+	.post-reply-form{
+		margin-top:25px;
+		.reply-textarea{
+			float: none;
+		}
+		.field_title{
+			color: #999999;
+		    font-size: 14px;
+		}
+		.submit_btn{
+			margin-left: 0px;
+		}
+       	.attached-items{
+       		list-style: none;
+       		padding: 0px 0px 0px 25px;
+       		margin: 6px 0px 0px 0px;
+       		li{
+	       		position: relative;
+       			padding: 3px 0;
+       		}
+       		a{
+       			font-size: 12px;
+       			color: $txt-color;
+       		}
+       		.icon{
+       			fill: #bbbbbb;
+       			position: absolute;
+       			top: 3px;
+       			left: -22px;
+       			height: 16px;
+       			width: 16px;
+       		}
+       		&:hover .icon{
+       			fill: $primary_color_hover;
+       		}
+       	}
+		.max-size_warning{
+   			font-size: 12px;
+			color: #999999;
+		    margin: 7px 0 0 2px;
+		}
+	}
+
+}

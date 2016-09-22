@@ -1,0 +1,225 @@
+@@include('template/head.html', { "title": "Личный профиль" })
+
+@@include('template/header.html')
+
+
+
+<article class="main_content">
+
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        @@include('template/breads.html')
+
+
+        <div class="tabs_wrap light_tabs">
+            <a href="#" class="tabs_item js_tabs active"><span class="title">Личный кабинет</span></a>
+            <a href="#" class="tabs_item js_tabs"><span class="title">Анкета дилера</span></a>
+        </div>
+          
+        <div class="tab_content_wrapper">
+            <div class="tab_content_block">
+
+                <div class="form_wrapper">
+                    <form action="">
+                        <div class="form_block">
+                            <h2 class="form_block_title">Личная информация</h2>
+
+                            <div class="form_field">
+                                <div class="field_title">Фамилия <span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field"><!-- add class 'error' to show errors -->
+                                <div class="field_title">Имя <span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                    <div class="error_txt">Поле заполнено с ошибкой</div>
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Отчество</div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Email&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_medium">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Контактный телефон&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Мобильный телефон&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Дата рождения&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem birthday_field">
+                                    <div class="select_wrap day">
+                                        <select data-placeholder="день" class="js_chosen_select">
+                                            <option value=""></option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                    <div class="select_wrap month">
+                                        <select data-placeholder="месяц" class="js_chosen_select">
+                                            <option value=""></option>
+                                            <option value="">сентябрь</option>
+                                            <option value="">октябрь</option>
+                                            <option value="">ноябрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                    <div class="select_wrap year">
+                                        <select data-placeholder="год" class="js_chosen_select">
+                                            <option value=""></option>
+                                            <option value="">1971</option>
+                                            <option value="">1972</option>
+                                            <option value="">1973</option>
+                                            <option value="">1974</option>
+                                            <option value="">1997</option>
+                                            <option value="">1998</option>
+                                            <option value="">1999</option>
+                                            <option value="">2000</option>
+                                            <option value="">2001</option>
+                                            <option value="">2002</option>
+                                            <option value="">2003</option>
+                                            <option value="">2004</option>
+                                            <option value="">2005</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div><!-- /form_field -->
+                            
+                        </div><!-- /form_block -->
+
+                        <div class="form_block">
+                            <h2 class="form_block_title">Информация о должности и месте работы</h2>
+                            
+                            <div class="form_field">
+                                <div class="field_title">Город&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <div class="select_wrap field_small">
+                                        <select class="js_chosen_select" disabled>
+                                            <option></option>
+                                            <option>Москва</option>
+                                            <option>Москва</option>
+                                            <option>Москва</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Название дилера&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <div class="select_wrap field_medium">
+                                        <select class="js_chosen_select" disabled>
+                                            <option></option>
+                                            <option>Москва</option>
+                                            <option>Москва</option>
+                                            <option>Москва</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Отдел&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <div class="select_wrap field_medium">
+                                        <select class="js_chosen_select" disabled>
+                                            <option></option>
+                                            <option>Москва</option>
+                                            <option>Москва</option>
+                                            <option>Москва</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title no_padding">Менеджер по маркетингу&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <div class="select_wrap field_medium">
+                                        <select class="js_chosen_select">
+                                            <option></option>
+                                            <option>Москва</option>
+                                            <option>Москва</option>
+                                            <option>Москва</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Должность&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_medium">
+                                </div>
+                            </div><!-- /form_field -->
+
+                        </div><!-- /form_block -->
+
+                      
+                        <div class="form_field pull_left btns_wrap">
+                            <input type="submit" class="theme_btn" value="Сохранить">
+                            <input type="submit" class="theme_btn_light" value="Отмена">
+                            <a href="#" class="nav_link">Изменить пароль</a>
+                        </div><!-- /form_field -->
+                    </form>
+                </div>
+
+            </div><!-- /tab_content_block -->
+        </div><!-- /tab_content_wrapper -->
+
+    </div><!--/inside_wrapper -->
+
+
+</article><!--/main_content -->
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')
+       

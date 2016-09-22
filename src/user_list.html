@@ -1,0 +1,172 @@
+@@include('template/head.html', { "title": "Личный профиль" })
+
+@@include('template/header.html')
+
+
+
+<article class="main_content">
+
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        @@include('template/breads.html')
+
+        <div class="btns_wrap fl_right">
+            <a href="#" class="theme_btn">Экспорт списка в XLS</a>
+        </div>
+        
+        <h1>Список пользователей</h1>
+        
+
+        <div class="primary_table">
+            <table>
+                <tr class="header_row">
+                    <th><a href="#" class="sort down">ID</a></th>
+                    <th><a href="#" class="sort down active">ФИО</a></th>
+                    <th>Тип организации</th>
+                    <th>Название</th>
+                    <th>Должность</th>
+                    <th><a href="#" class="sort down active">Рег.</a></th>
+                    <th>Вход</th>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094832</td>
+                    <td>Константинопольский Константин Константинович</td>
+                    <td>Дилер Volkswagen</td>
+                    <td>Сумотри-Авто ФВ</td>
+                    <td>ответственный директор по основной деятельности</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094830</td>
+                    <td>Васильев Александр  Валерьевич</td>
+                    <td>Агентство</td>
+                    <td>Автомобильный гид России</td>
+                    <td>выпускающий редактор</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094830</td>
+                    <td>Нигматулина Светлана Александровна</td>
+                    <td>Дилер Volkswagen</td>
+                    <td>Фольксваген Центр Германика (Химки)</td>
+                    <td>ответственный директор по основной деятельности</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094830</td>
+                    <td>Широков Петр Андреевич</td>
+                    <td>Агентство</td>
+                    <td>Автодело</td>
+                    <td>ответственный редактор</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094830</td>
+                    <td>Березнаяков-Заполев Арамагеддон Викторович</td>
+                    <td>Дилер Volkswagen</td>
+                    <td>Аванта</td>
+                    <td>ответственный директор по основной деятельности</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094832</td>
+                    <td>Константинопольский Константин Константинович</td>
+                    <td>Дилер Volkswagen</td>
+                    <td>Сумотри-Авто ФВ</td>
+                    <td>ответственный директор по основной деятельности</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094830</td>
+                    <td>Васильев Александр  Валерьевич</td>
+                    <td>Агентство</td>
+                    <td>Автомобильный гид России</td>
+                    <td>выпускающий редактор</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094830</td>
+                    <td>Нигматулина Светлана Александровна</td>
+                    <td>Дилер Volkswagen</td>
+                    <td>Фольксваген Центр Германика (Химки)</td>
+                    <td>ответственный директор по основной деятельности</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094830</td>
+                    <td>Широков Петр Андреевич</td>
+                    <td>Агентство</td>
+                    <td>Автодело</td>
+                    <td>ответственный редактор</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+                <tr class="js_link_open" data-url="user_inner.html">
+                    <td>094830</td>
+                    <td>Березнаяков-Заполев Арамагеддон Викторович</td>
+                    <td>Дилер Volkswagen</td>
+                    <td>Аванта</td>
+                    <td>ответственный директор по основной деятельности</td>
+                    <td>21.02.14</td>
+                    <td>21.02.14</td>
+                </tr>
+            </table>
+        </div><!-- /primary_table -->
+        
+
+
+        <div class="page_set clearfix">
+            <div class="paginator">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#">...</a>
+                <a href="#">20</a>
+                <a href="#">30</a>
+                <a href="#">40</a>
+            </div>
+            <div class="content_amount">
+                <div class="field_title">Элементов на странице</div>
+                <div class="select_wrap field_elem field_number">
+                    <select class="js_chosen_select">
+                        <option value="">13</option>
+                        <option value="">26</option>
+                        <option value="">39</option>
+                    </select>
+                    <svg class="icon">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                    </svg>
+                </div>
+            </div>
+        </div><!-- /page_set -->
+                    
+
+    </div><!--/content_block -->
+
+</article><!--/main_content -->
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')

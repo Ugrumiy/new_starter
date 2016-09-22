@@ -1,0 +1,121 @@
+@@include('template/head.html', { "title": "Обратная связь" })
+
+@@include('template/header.html')
+
+
+
+<article class="main_content">
+
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        @@include('template/breads.html')
+
+        <h1>Обратная связь</h1>
+
+        <div class="form_wrapper medium_form">
+            <form action="">
+
+                <div class="form_field">
+                    <div class="field_title">Фамилия&nbsp;<span class="require">*</span></div>
+                    <div class="field_elem">
+                        <input type="text" class="inp_txt field_small">
+                    </div>
+                </div><!-- /form_field -->
+                <div class="form_field"><!-- add class 'error' to show errors -->
+                    <div class="field_title">Имя&nbsp;<span class="require">*</span></div>
+                    <div class="field_elem">
+                        <input type="text" class="inp_txt field_small">
+                        <div class="error_txt">Поле заполнено с ошибкой</div>
+                    </div>
+                </div><!-- /form_field -->
+                <div class="form_field">
+                    <div class="field_title">Отчество</div>
+                    <div class="field_elem">
+                        <input type="text" class="inp_txt field_small">
+                    </div>
+                </div><!-- /form_field -->
+                <div class="form_field">
+                    <div class="field_title">Email&nbsp;<span class="require">*</span></div>
+                    <div class="field_elem">
+                        <input type="text" class="inp_txt field_medium">
+                    </div>
+                </div><!-- /form_field -->
+                    
+                <div class="form_field">
+                    <div class="field_title">Отдел&nbsp;<span class="require">*</span></div>
+                    <div class="field_elem">
+                        <div class="select_wrap field_medium">
+                            <select class="js_chosen_select">
+                                <option></option>
+                                <option>Очень хороший отдел</option>
+                                <option>Просто хороший отдел</option>
+                                <option>Очень хороший отдел</option>
+                                <option>Просто хороший отдел</option>
+                            </select>
+                            <svg class="icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                            </svg>
+                        </div>
+                    </div>
+                </div><!-- /form_field -->
+
+                <div class="form_field">
+                    <div class="field_title no_padding">Ответственный менеджер&nbsp;<span class="require">*</span></div>
+                    <div class="field_elem">
+                        <div class="select_wrap field_medium">
+                            <select class="js_chosen_select">
+                                <option></option>
+                                <option>Очень хороший менеджер</option>
+                                <option>Просто хороший менеджер</option>
+                                <option>Очень хороший менеджер</option>
+                                <option>Просто хороший менеджер</option>
+                            </select>
+                            <svg class="icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                            </svg>
+                        </div>
+                    </div>
+                </div><!-- /form_field -->
+
+                <div class="form_field">
+                    <div class="field_title">Ваш вопрос&nbsp;<span class="require">*</span></div>
+                    <div class="field_elem">
+                        <textarea maxlength="500" class="inp_textarea required" id="message" name="message"></textarea>
+                    </div>
+                </div>
+
+                <div class="form_field pull_left">
+                    <img src="temp/trash_img/capcha.jpeg" alt="capcha">
+                </div><!-- /form_field -->
+
+                <div class="form_field">
+                    <div class="field_title">Символы с картинки&nbsp;<span class="require">*</span></div>
+                    <div class="field_elem">
+                        <input type="text" class="inp_txt field_super_small">
+                    </div>
+                </div><!-- /form_field -->
+               
+                <div class="form_field pull_left btns_wrap">
+                    <input type="submit" class="theme_btn" value="Отправить">
+                </div><!-- /form_field -->
+            </form>
+        </div>
+                
+        
+
+    </div><!--/content_block -->
+
+
+</article><!--/main_content -->
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')
+       

@@ -1,0 +1,65 @@
+$container: 100%;
+$columns: 12;
+$gap: 20px;
+
+$column_width: $container/$columns;
+
+
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+.container_#{$columns}
+{
+    width: if($container == 100% , auto , $container);
+    position:relative;
+    margin-left:-$gap/2 !important;
+    margin-right:-$gap/2 !important;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+
+[class*="grid_"] {
+    display: inline;
+    float: left;
+    padding-left: $gap/2;
+    padding-right: $gap/2;
+    position:relative;
+    min-height: 1px;
+ -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+     box-sizing:border-box;
+}
+
+
+@for $i from 1 through $columns {
+.grid_#{$i} { width: $column_width * $i }
+}
+@for $i from 1 to $columns {
+.prefix_#{$i} { margin-left: $column_width * $i }
+}
+@for $i from 1 to $columns {
+.suffix_#{$i} { margin-right: $column_width * $i }
+}
+@for $i from 1 to $columns {
+.push_#{$i} { left: $column_width * $i  }
+}
+@for $i from 1 to $columns {
+.pull_#{$i} { left: - ($column_width * $i ) }
+}
+
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+.container_#{$columns}:before,
+.container_#{$columns}:after {
+    content: ' ';
+    display: table;
+}
+
+.container_#{$columns}:after {
+    clear: both;
+}
+
+
+

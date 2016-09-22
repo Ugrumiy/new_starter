@@ -1,0 +1,228 @@
+@@include('template/head.html', { "title": "Регистрация" })
+@@include('template/header_login.html')
+
+
+
+<article class="main_content">
+    
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        <h1>Регистрация нового пользователя </h1>
+
+        <div class="form_wrapper medium_form">
+            <form action="">
+                <div class="container_12">
+                    <div class="grid_2">
+                        <div class="form_field error">
+                            <div class="profile_img no_pic"><svg class="icon user_default"><use xlink:href="resources/img/sprite.svg#user_default"></use></svg></div>
+                            <label for="upload_btn" class="theme_btn_light upload_btn profile_btn"><input type="file" id="upload_btn">Выбрать фото</label>
+                            <div class="error_txt">Фоточку надо прям обязательно выбрать</div>
+                        </div>
+                    </div>
+                    <div class="grid_8">
+                        <div class="form_block">
+                            <h2 class="form_block_title">Личная информация</h2>
+
+                            <div class="form_field">
+                                <div class="field_title">Фамилия&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field error"><!-- add class 'error' to show errors -->
+                                <div class="field_title">Имя&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                    <div class="error_txt">Поле заполнено с ошибкой</div>
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Отчество</div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Email&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_medium">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Контактный телефон&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Мобильный телефон&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_small">
+                                </div>
+                            </div><!-- /form_field -->
+                            <div class="form_field">
+                                <div class="field_title">Дата рождения&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem birthday_field">
+                                    <div class="select_wrap day">
+                                        <select data-placeholder="день" class="js_chosen_select">
+                                            <option value=""></option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                    <div class="select_wrap month">
+                                        <select data-placeholder="месяц" class="js_chosen_select">
+                                            <option value=""></option>
+                                            <option value="">сентябрь</option>
+                                            <option value="">октябрь</option>
+                                            <option value="">ноябрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                            <option value="">декабрь</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                    <div class="select_wrap year">
+                                        <select data-placeholder="год" class="js_chosen_select">
+                                            <option value=""></option>
+                                            <option value="">1971</option>
+                                            <option value="">1972</option>
+                                            <option value="">1973</option>
+                                            <option value="">1974</option>
+                                            <option value="">1997</option>
+                                            <option value="">1998</option>
+                                            <option value="">1999</option>
+                                            <option value="">2000</option>
+                                            <option value="">2001</option>
+                                            <option value="">2002</option>
+                                            <option value="">2003</option>
+                                            <option value="">2004</option>
+                                            <option value="">2005</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div><!-- /form_field -->
+                            
+                        </div><!-- /form_block -->
+
+                        <div class="form_block">
+                            <h2 class="form_block_title">Информация о должности и месте работы</h2>
+                            
+                            <div class="form_field">
+                                <div class="field_title">Тип организации&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <div class="select_wrap field_small">
+                                        <select class="js_chosen_select">
+                                            <option></option>
+                                            <option>Дилер</option>
+                                            <option>Агентство</option>
+                                            <option>Импортер</option>
+                                        </select>
+                                        <svg class="icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div><!-- /form_field -->
+
+                            <div class="form_field pull_left">
+                                <img src="temp/trash_img/capcha.jpeg" alt="capcha">
+                            </div><!-- /form_field -->
+
+                            <div class="form_field">
+                                <div class="field_title">Символы с картинки&nbsp;<span class="require">*</span></div>
+                                <div class="field_elem">
+                                    <input type="text" class="inp_txt field_super_small">
+                                </div>
+                            </div><!-- /form_field -->
+                        </div><!-- /form_block -->
+                        
+                        <div class="form_field pull_left">
+                            <label class="inp_checkbox">
+                                <input type="checkbox" checked>
+                                <span class="check_icon">
+                                    <svg class="icon">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg> 
+                                </span>
+                                <span class="title">Я согласен на передачу персональных данных для обработки данного запроса. Вы также можете использовать мои персональные данные согласно <a href="#" class="js_popup" data-popup="#popup">Положению о защите персональных данных</a></span>
+                            </label>
+                        </div><!-- /form_field -->
+                      
+                        <div class="form_field pull_left btns_wrap">
+                            <input type="submit" class="theme_btn" value="Зарегистрироваться">
+                            <a href="#" class="nav_link">У меня уже имеется учетная запись</a>
+                        </div><!-- /form_field -->
+                    </div><!-- /grid_8 -->
+                </div><!-- /container_12 -->
+            </form>
+        </div><!-- /form_wrapper -->
+    
+    </div><!--/inside_wrapper -->
+
+
+
+</article><!--/main_content -->
+
+
+
+<div class="popup" id="popup">
+    <div class="pop_content">
+        <div class="popup_header">
+            <a href="#" class="close js_popup_close">
+                <svg class="icon icon_delete">
+                    <use xlink:href="resources/img/sprite.svg#Delete">
+                </svg>
+            </a>
+            <h2 class="popup_title">Правила использования сайта</h2>
+        </div>
+        
+        <div class="popup_scroll_wrap js_custom_scroll">
+            <div class="popup_content_inside">
+                <h2>Пользовательское соглашение</h2>
+                    <p>Настоящее Пользовательское соглашение (далее - «Соглашение») определяет условия и правила использования Материалов и Сервисов Сайта <u>www.drivetosochi.com</u> (далее – «Сайт»), а также устанавливает права и обязанности его Пользователей и Администрации Сайта. Соглашение распространяется также на отношения, связанные с третьими лицами, не являющимися Пользователями Сайта, но чьи права и интересы могут быть затронуты в результате действий Пользователей Сайта.</p>
+                    <h3>1. Общие условия</h3>
+                    <p>1.1. Настоящее Соглашение является юридически обязательным соглашением между Пользователем и Администрацией Сайта, предметом которого является предоставление Администрацией Сайта Пользователю права использования Сайта и его Сервисов.</p>
+                    <p>1.2. Настоящее Соглашение является публичной офертой в соответствии со ст. 437 Гражданского кодекса РФ. Пользователь обязан полностью ознакомиться с настоящим Соглашением до момента регистрации на Сайте. Регистрация Пользователя на Сайте означает полное и безоговорочное принятие Пользователем условий настоящего Соглашения и обязанности их соблюдения в соответствии со ст. 438 Гражданского кодекса РФ. Получая доступ к текстовым, графическим, фото-, аудио-, видео- и иным Материалам, размещенным на Сайте (далее – «Материалы Сайта». Совокупность Материалов на Сайте, а также на его отдельных Сервисах именуется Контентом Сайта), а также к Сервисам Сайта, Пользователь считается присоединившимся к настоящему Соглашению.</p>
+                    <h3>2. Интеллектуальные права</h3>
+                    <p>2.1. Все интеллектуальные права на Сайт и его отдельные компоненты, базу данных, коды, элементы дизайна, шрифты, логотипы, товарные знаки, текст, графические изображения, иллюстрации, фото-, видео- и иные объекты являются объектами интеллектуальных прав Администрации Сайта.</p>
+                    <p>При использовании Материалов Сайта и Контента Сайта Пользователь соблюдает права Администрации Сайта на Материалы Сайта и Контент Сайта, в том числе обязуется в каждом случае использования Материалов Сайта и Контента Сайта ссылаться на  источник Материалов.</p>
+                    <p>2.1. Все интеллектуальные права на Сайт и его отдельные компоненты, базу данных, коды, элементы дизайна, шрифты, логотипы, товарные знаки, текст, графические изображения, иллюстрации, фото-, видео- и иные объекты являются объектами интеллектуальных прав Администрации Сайта.</p>
+                    <p>При использовании Материалов Сайта и Контента Сайта Пользователь соблюдает права Администрации Сайта на Материалы Сайта и Контент Сайта, в том числе обязуется в каждом случае использования Материалов Сайта и Контента Сайта ссылаться на  источник Материалов.</p>
+                    <p>2.1. Все интеллектуальные права на Сайт и его отдельные компоненты, базу данных, коды, элементы дизайна, шрифты, логотипы, товарные знаки, текст, графические изображения, иллюстрации, фото-, видео- и иные объекты являются объектами интеллектуальных прав Администрации Сайта.</p>
+                    <p>При использовании Материалов Сайта и Контента Сайта Пользователь соблюдает права Администрации Сайта на Материалы Сайта и Контент Сайта, в том числе обязуется в каждом случае использования Материалов Сайта и Контента Сайта ссылаться на  источник Материалов.</p>
+
+            </div><!--  /popup_content_inside -->
+
+        </div><!--  /popup_scroll_wrap -->
+
+    </div><!-- /pop_content -->
+    
+</div><!-- /popup -->
+
+
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')
+       

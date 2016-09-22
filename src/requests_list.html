@@ -1,0 +1,305 @@
+@@include('template/head.html', { "title": "Личный профиль" })
+
+@@include('template/header.html')
+
+
+
+<article class="main_content">
+
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        @@include('template/breads.html')
+
+        <h1>Список заявок</h1>
+
+        <div class="primary_table">
+            <table>
+                <tr class="header_row">
+                    <th><a href="#" class="sort down">ID</a></th>
+                    <th><a href="#" class="sort down">ФИО</a></th>
+                    <th>Тип / Название организации</th>
+                    <th><a href="#" class="sort down">E-mail</a></th>
+                    <th><a href="#" class="sort down">Подана</a></th>
+                    <th>Изменена</th>
+                    <th class="sort_elem">Статус
+                        <div class="select_wrap field_elem">
+                            <select class="js_chosen_select">
+                                <option value="">Все</option>
+                                <option value="">Новая</option>
+                                <option value="">Одобрена</option>
+                                <option value="">Отклонена</option>
+                            </select>
+                            <svg class="icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                            </svg>
+                        </div>
+                    </th>
+                    <th class="no_p"></th>
+                </tr>
+                <tr class="js_link_open" data-url="request.html">
+                    <td>094832</td>
+                    <td>Константинопольский Константин Константинович</td>
+                    <td>СМИ / Межрегиональный автомобильный журнал “4 колеса”</td>
+                    <td class="wrap">konstantinopolsky.konstantin.@mail4kolesa.ru</td>
+                    <td>23.07.13 17:23</td>
+                    <td>23.07.13 17:23</td>
+                    <td><span class="status">новая</span></td>
+                    <td class="no_p">
+                        <div class="hover_icons_wrapper">
+                            <div class="table_hover_icons">
+                                <a href="#" class="icon_item js_link_open_stop has_tooltip">
+                                    <svg class="icon icon_check_big">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg>
+                                    <span class="tooltip">Принять</span>
+                                </a>
+                                <a href="#" class="icon_item js_link_open_stop alarm has_tooltip">
+                                    <svg class="icon icon_delete">
+                                        <use xlink:href="resources/img/sprite.svg#Delete">
+                                    </svg>
+                                    <span class="tooltip">Отказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="request.html">
+                    <td>094831</td>
+                    <td>Васильев Александр  Валерьевич</td>
+                    <td>СМИ / Газета “Автообзор”</td>
+                    <td class="wrap">vasiliev.al@avtoobzor.ru</td>
+                    <td>13.07.13 17:23</td>
+                    <td>13.07.13 17:23</td>
+                    <td><span class="status approved">одобрена</span></td>
+                    <td class="no_p">
+                        <div class="hover_icons_wrapper">
+                            <div class="table_hover_icons">
+                                <a href="#" class="icon_item js_link_open_stop has_tooltip">
+                                    <svg class="icon icon_check_big">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg>
+                                    <span class="tooltip">Принять</span>
+                                </a>
+                                <a href="#" class="icon_item js_link_open_stop alarm has_tooltip">
+                                    <svg class="icon icon_delete">
+                                        <use xlink:href="resources/img/sprite.svg#Delete">
+                                    </svg>
+                                    <span class="tooltip">Отказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="request.html">
+                    <td>094830</td>
+                    <td>Нигматулина Светлана Александровна</td>
+                    <td>СМИ / Журнал “За рулем”</td>
+                    <td class="wrap">nigmatulina.svetlana@zarulem.ru</td>
+                    <td>02.07.13 17:23</td>
+                    <td>02.07.13 17:23</td>
+                    <td><span class="status">новая</span></td>
+                    <td class="no_p">
+                        <div class="hover_icons_wrapper">
+                            <div class="table_hover_icons">
+                                <a href="#" class="icon_item js_link_open_stop has_tooltip">
+                                    <svg class="icon icon_check_big">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg>
+                                    <span class="tooltip">Принять</span>
+                                </a>
+                                <a href="#" class="icon_item js_link_open_stop alarm has_tooltip">
+                                    <svg class="icon icon_delete">
+                                        <use xlink:href="resources/img/sprite.svg#Delete">
+                                    </svg>
+                                    <span class="tooltip">Отказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="request.html">
+                    <td>094830</td>
+                    <td>Нигматулина Светлана Александровна</td>
+                    <td>СМИ / Журнал “За рулем”</td>
+                    <td class="wrap">nigmatulina.svetlana@zarulem.ru</td>
+                    <td>02.07.13 17:23</td>
+                    <td>02.07.13 17:23</td>
+                    <td><span class="status refused">отклонена</span></td>
+                    <td class="no_p">
+                        <div class="hover_icons_wrapper">
+                            <div class="table_hover_icons">
+                                <a href="#" class="icon_item js_link_open_stop has_tooltip">
+                                    <svg class="icon icon_check_big">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg>
+                                    <span class="tooltip">Принять</span>
+                                </a>
+                                <a href="#" class="icon_item js_link_open_stop alarm has_tooltip">
+                                    <svg class="icon icon_delete">
+                                        <use xlink:href="resources/img/sprite.svg#Delete">
+                                    </svg>
+                                    <span class="tooltip">Отказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="request.html">
+                    <td>094829</td>
+                    <td>Константинопольский Константин Константинович</td>
+                    <td>Дилерский центр Volkswagen / Volkswagen центр Германика (Химки)</td>
+                    <td class="wrap">konstantinopolsky.konstantin.@mail4kolesa.ru</td>
+                    <td>23.06.13 17:23</td>
+                    <td>23.06.13 17:23</td>
+                    <td><span class="status">новая</span></td>
+                    <td class="no_p">
+                        <div class="hover_icons_wrapper">
+                            <div class="table_hover_icons">
+                                <a href="#" class="icon_item js_link_open_stop has_tooltip">
+                                    <svg class="icon icon_check_big">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg>
+                                    <span class="tooltip">Принять</span>
+                                </a>
+                                <a href="#" class="icon_item js_link_open_stop alarm has_tooltip">
+                                    <svg class="icon icon_delete">
+                                        <use xlink:href="resources/img/sprite.svg#Delete">
+                                    </svg>
+                                    <span class="tooltip">Отказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="request.html">
+                    <td>094827</td>
+                    <td>Васильев Александр  Валерьевич</td>
+                    <td>СМИ / Газета “Автообзор”</td>
+                    <td class="wrap">vasiliev.al@avtoobzor.ru</td>
+                    <td>17.05.13 17:23</td>
+                    <td>17.05.13 17:23</td>
+                    <td><span class="status approved">одобрена</span></td>
+                    <td class="no_p">
+                        <div class="hover_icons_wrapper">
+                            <div class="table_hover_icons">
+                                <a href="#" class="icon_item js_link_open_stop has_tooltip">
+                                    <svg class="icon icon_check_big">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg>
+                                    <span class="tooltip">Принять</span>
+                                </a>
+                                <a href="#" class="icon_item js_link_open_stop alarm has_tooltip">
+                                    <svg class="icon icon_delete">
+                                        <use xlink:href="resources/img/sprite.svg#Delete">
+                                    </svg>
+                                    <span class="tooltip">Отказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="request.html">
+                    <td>094836</td>
+                    <td>Нигматулина Светлана Александровна</td>
+                    <td>СМИ / Журнал “За рулем”</td>
+                    <td class="wrap">nigmatulina.svetlana@zarulem.ru</td>
+                    <td>12.05.13 17:23</td>
+                    <td>12.05.13 17:23</td>
+                    <td><span class="status">новая</span></td>
+                    <td class="no_p">
+                        <div class="hover_icons_wrapper">
+                            <div class="table_hover_icons">
+                                <a href="#" class="icon_item js_link_open_stop has_tooltip">
+                                    <svg class="icon icon_check_big">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg>
+                                    <span class="tooltip">Принять</span>
+                                </a>
+                                <a href="#" class="icon_item js_link_open_stop alarm has_tooltip">
+                                    <svg class="icon icon_delete">
+                                        <use xlink:href="resources/img/sprite.svg#Delete">
+                                    </svg>
+                                    <span class="tooltip">Отказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="request.html">
+                    <td>094825</td>
+                    <td>Нигматулина Светлана Александровна</td>
+                    <td>СМИ / Журнал “За рулем”</td>
+                    <td class="wrap">nigmatulina.svetlana@zarulem.ru</td>
+                    <td>11.04.13 17:23</td>
+                    <td>11.04.13 17:23</td>
+                    <td><span class="status">новая</span></td>
+                    <td class="no_p">
+                        <div class="hover_icons_wrapper">
+                            <div class="table_hover_icons">
+                                <a href="#" class="icon_item js_link_open_stop has_tooltip">
+                                    <svg class="icon icon_check_big">
+                                        <use xlink:href="resources/img/sprite.svg#Check">
+                                    </svg>
+                                    <span class="tooltip">Принять</span>
+                                </a>
+                                <a href="#" class="icon_item js_link_open_stop alarm has_tooltip">
+                                    <svg class="icon icon_delete">
+                                        <use xlink:href="resources/img/sprite.svg#Delete">
+                                    </svg>
+                                    <span class="tooltip">Отказать</span>
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div><!-- /primary_table -->
+
+        <div class="page_set clearfix">
+            <div class="paginator">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#">...</a>
+                <a href="#">20</a>
+                <a href="#">30</a>
+                <a href="#">40</a>
+            </div>
+            <div class="content_amount">
+                <div class="field_title">Элементов на странице</div>
+                <div class="select_wrap field_elem field_number">
+                    <select class="js_chosen_select">
+                        <option value="">13</option>
+                        <option value="">26</option>
+                        <option value="">39</option>
+                    </select>
+                    <svg class="icon">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+
+
+     </div><!--/content_block -->
+
+</article><!--/main_content -->
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')

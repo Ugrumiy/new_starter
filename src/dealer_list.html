@@ -1,0 +1,256 @@
+@@include('template/head.html', { "title": "Список дилеров" })
+
+@@include('template/header.html')
+
+
+
+<article class="main_content">
+
+
+    <!-- CONTENT BLOCK -->
+    <div class="content_block inside_wrapper clearfix">
+
+        @@include('template/breads.html')
+        
+        <div class="btns_wrap fl_right">
+            <a href="#" class="theme_btn">Добавить дилера</a>
+            <a href="#" class="nav_link">Экспорт списка в XLS</a>
+        </div>
+
+        <div class="search_content_wrap">
+            <form action="">
+                <input type="text" class="inp_txt field_medium" placeholder="Поиск по дилерам">
+                <input type="submit" class="theme_btn fl_right" value="Найти">
+            </form>
+        </div>
+
+        <h1>Список дилеров</h1>
+
+
+        <div class="primary_table">
+            <table>
+                <tr class="header_row">
+                    <th><a href="#" class="sort up active">Название</a></th>
+                    <th><a href="#" class="sort up">Город</a></th>
+                    <th><a href="#" class="sort down">Дилерский номер</a></th>
+                    <th><a href="#" class="sort down">Менеджер</a></th>
+                    <th>Услуги</th>
+                </tr>
+                <tr class="js_link_open" data-url="dealer_inner.html">
+                    <td>Атлант-М Смоленск</td>
+                    <td>Смоленск</td>
+                    <td>248</td>
+                    <td>Елизавета Фролова</td>
+                    <td>
+                        <div class="services_icons_block nowrap">
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon new_cars active"><use xlink:href="resources/img/sprite.svg#new_cars"></svg><!-- add class 'active' to the icon -->
+                                <div class="tooltip">Продажа новых автомобилей</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon old_cars"><use xlink:href="resources/img/sprite.svg#old_cars"></svg>
+                                <div class="tooltip">Das WeltAuto: продажа автомобилей с пробегом</div>
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon service active"><use xlink:href="resources/img/sprite.svg#service"></svg>
+                                <div class="tooltip">Сервисное обслуживание</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon kuzov active"><use xlink:href="resources/img/sprite.svg#kuzov"></svg>
+                                <div class="tooltip">Кузовной ремонт</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon fleet"><use xlink:href="resources/img/sprite.svg#fleet"></svg>
+                                <div class="tooltip">Fleet-центры</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon details active"><use xlink:href="resources/img/sprite.svg#details"></svg>
+                                <div class="tooltip">Запчасти и аксессуары</div>     
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="dealer_inner.html">
+                    <td>Ключ Авто Сочи</td>
+                    <td>Сочи</td>
+                    <td>272</td>
+                    <td>Анна Тишурова</td>
+                    <td>
+                        <div class="services_icons_block nowrap">
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon new_cars active"><use xlink:href="resources/img/sprite.svg#new_cars"></svg><!-- add class 'active' to the icon -->
+                                <div class="tooltip">Продажа новых автомобилей</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon old_cars"><use xlink:href="resources/img/sprite.svg#old_cars"></svg>
+                                <div class="tooltip">Das WeltAuto: продажа автомобилей с пробегом</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon service active"><use xlink:href="resources/img/sprite.svg#service"></svg>
+                                <div class="tooltip">Сервисное обслуживание</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon kuzov active"><use xlink:href="resources/img/sprite.svg#kuzov"></svg>
+                                <div class="tooltip">Кузовной ремонт</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon fleet"><use xlink:href="resources/img/sprite.svg#fleet"></svg>
+                                <div class="tooltip">Fleet-центры</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon details active"><use xlink:href="resources/img/sprite.svg#details"></svg>
+                                <div class="tooltip">Запчасти и аксессуары</div>     
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="dealer_inner.html">
+                    <td>Автомир ФВ Саратов</td>
+                    <td>Саратов</td>
+                    <td>279</td>
+                    <td>Елизавета Фролова</td>
+                    <td>
+                        <div class="services_icons_block nowrap">
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon new_cars active"><use xlink:href="resources/img/sprite.svg#new_cars"></svg><!-- add class 'active' to the icon -->
+                                <div class="tooltip">Продажа новых автомобилей</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon old_cars"><use xlink:href="resources/img/sprite.svg#old_cars"></svg>
+                                <div class="tooltip">Das WeltAuto: продажа автомобилей с пробегом</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon service active"><use xlink:href="resources/img/sprite.svg#service"></svg>
+                                <div class="tooltip">Сервисное обслуживание</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon kuzov active"><use xlink:href="resources/img/sprite.svg#kuzov"></svg>
+                                <div class="tooltip">Кузовной ремонт</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon fleet"><use xlink:href="resources/img/sprite.svg#fleet"></svg>
+                                <div class="tooltip">Fleet-центры</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon details active"><use xlink:href="resources/img/sprite.svg#details"></svg>
+                                <div class="tooltip">Запчасти и аксессуары</div>     
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="dealer_inner.html">
+                    <td>Элвис Моторс</td>
+                    <td>Саратов</td>
+                    <td>156</td>
+                    <td>Елизавета Фролова</td>
+                    <td>
+                        <div class="services_icons_block nowrap">
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon new_cars active"><use xlink:href="resources/img/sprite.svg#new_cars"></svg><!-- add class 'active' to the icon -->
+                                <div class="tooltip">Продажа новых автомобилей</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon old_cars"><use xlink:href="resources/img/sprite.svg#old_cars"></svg>
+                                <div class="tooltip">Das WeltAuto: продажа автомобилей с пробегом</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon service active"><use xlink:href="resources/img/sprite.svg#service"></svg>
+                                <div class="tooltip">Сервисное обслуживание</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon kuzov active"><use xlink:href="resources/img/sprite.svg#kuzov"></svg>
+                                <div class="tooltip">Кузовной ремонт</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon fleet"><use xlink:href="resources/img/sprite.svg#fleet"></svg>
+                                <div class="tooltip">Fleet-центры</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon details active"><use xlink:href="resources/img/sprite.svg#details"></svg>
+                                <div class="tooltip">Запчасти и аксессуары</div>     
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="js_link_open" data-url="dealer_inner.html">
+                    <td>Диверс-Моторс Самара</td>
+                    <td>Самара</td>
+                    <td>171</td>
+                    <td>Анна Тишурова</td>
+                    <td>
+                        <div class="services_icons_block nowrap">
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon new_cars active"><use xlink:href="resources/img/sprite.svg#new_cars"></svg><!-- add class 'active' to the icon -->
+                                <div class="tooltip">Продажа новых автомобилей</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon old_cars"><use xlink:href="resources/img/sprite.svg#old_cars"></svg>
+                                <div class="tooltip">Das WeltAuto: продажа автомобилей с пробегом</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon service active"><use xlink:href="resources/img/sprite.svg#service"></svg>
+                                <div class="tooltip">Сервисное обслуживание</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon kuzov active"><use xlink:href="resources/img/sprite.svg#kuzov"></svg>
+                                <div class="tooltip">Кузовной ремонт</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon fleet"><use xlink:href="resources/img/sprite.svg#fleet"></svg>
+                                <div class="tooltip">Fleet-центры</div>     
+                            </div>
+                            <div class="service_icon_wrap has_tooltip">
+                                <svg class="icon service_icon details active"><use xlink:href="resources/img/sprite.svg#details"></svg>
+                                <div class="tooltip">Запчасти и аксессуары</div>     
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div><!-- /primary_table -->
+
+        <div class="page_set clearfix">
+            <div class="paginator">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#">...</a>
+                <a href="#">20</a>
+                <a href="#">30</a>
+                <a href="#">40</a>
+            </div>
+            <div class="content_amount">
+                <div class="field_title">Элементов на странице</div>
+                <div class="select_wrap field_elem field_number">
+                    <select class="js_chosen_select">
+                        <option value="">13</option>
+                        <option value="">26</option>
+                        <option value="">39</option>
+                    </select>
+                    <svg class="icon">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="resources/img/sprite.svg#dropdown_list-marker">
+                    </svg>
+                </div>
+            </div>
+        </div><!-- /page_set -->
+
+    </div><!--/content_block -->
+
+
+</article><!--/main_content -->
+
+
+
+
+@@include('template/footer.html')
+
+<!-- здесь подключать скрипт для этой страницы -->
+
+@@include('template/footer_end.html')

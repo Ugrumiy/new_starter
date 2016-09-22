@@ -1,0 +1,32 @@
+.tt-menu {
+    width: 100%;
+    background: $back_color;
+    border-radius: $radius;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border: none;
+    margin-top: 2px;
+    padding: 5px 0;
+
+    .tt-dataset {
+        padding: 0 10px;
+        margin: 0;
+        //max-height: none;
+        max-height: 168px;
+        overflow: auto;
+
+        .tt-suggestion {
+            cursor: pointer;
+            padding: 4px 0;
+            font-size: $font_sz;
+            color: $txt-color;
+            line-height: $font_sz + 2;
+            font-family: $font;
+            @include trs;
+
+            &:hover {
+                color: $primary_color_hover;
+            }
+        }
+    }
+}
