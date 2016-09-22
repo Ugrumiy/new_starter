@@ -1,12 +1,7 @@
-/*добавить через gulp-file-include*/
-@@include('../../../bower_components/normalize.css/normalize.css')
-@@include('../../../bower_components/chosen/chosen.min.css')
-@@include('../../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css')
+/*
+добавить через gulp-file-include
+пути к css файлам плагинов из bowera
 
-/*datepicker styles*/
-@@include('../../../bower_components/jquery-ui/themes/base/datepicker.css')
+Собака include('../../../bower_components/normalize.css/normalize.css')
 
-/*preloader*/
-@@include('../../../bower_components/PACE/themes/blue/pace-theme-minimal.css')
-
-@@include('../../../bower_components/magicsuggest/magicsuggest-min.css')
+*/

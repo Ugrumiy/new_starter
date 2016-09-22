@@ -1,8 +1,10 @@
+//You should save the package.json file and whenever you need to start working you just do npm install to pull in your node modules.
 'use strict';
 
 
 // Требуемые плагины
 var gulp        = require('gulp'),
+    pug         = require('gulp-pug'),
     prefixer    = require('gulp-autoprefixer'),
     watch       = require('gulp-watch'),
     sass        = require('gulp-sass'),
@@ -34,7 +36,7 @@ var path = {
         temp: 'build/temp/',
     },
     src: { //Пути откуда брать исходники
-        html: 'src/*.html', 
+        html: 'src/*.pug', 
         js_custom: 'src/resources/js/partials/*.js', //собираем main.js
         js_libs: 'src/resources/js/libs/libs.js', //путь к сборке библиотек
         js_app: 'src/resources/js/app/**/*.*', //путь к сборке app
@@ -46,7 +48,7 @@ var path = {
         sprite_svg: 'src/resources/sprite/*.svg', 
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-        html: 'src/**/*.html',
+        html: 'src/**/*.pug',
         js_custom: 'src/resources/js/partials/*.js',
         js_libs: 'src/resources/js/libs/libs.js',
         js_app: 'src/resources/js/app/**/*.*',
@@ -69,7 +71,7 @@ var path = {
 gulp.task('html:build', function () {
     return gulp.src(path.src.html) //Выберем файлы по нужному пути
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error %>") })) //ловим ошибки
-        .pipe(fileinclude()) //склеим файлы
+        .pipe(pug())
         .pipe(plumber.stop())
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений

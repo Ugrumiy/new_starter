@@ -1,23 +1,11 @@
 //sass import
-@import "partials/fonts.scss";  //fonts
+@import "inc/_mixins.scss";
+@import "inc/reset.scss";
 
-@import "partials/grid.scss";
-@import "partials/grid_catalogue.scss";
+//@import "inc/grid.scss";
 
-@import "partials/common_layout.scss";  //layout variables
+@import "inc/helper_classes.scss";  //layout classes
 
-@import "partials/common_components.scss";
+@import "inc/variables.scss";		//variables
 
-
-
-
-@import "partials/chosen_custom.scss";
-@import "partials/malihu_custom.scss";
-@import "partials/datepicker_custom.scss";
-@import "partials/typeahead_custom.scss";
-@import "partials/magicsuggest_custom.scss";
-@import "partials/jqslider.scss";
-
-@import "partials/catalog_item-details.scss";
-@import "partials/dwa_popup.scss";
-@import "partials/main.scss";
+@import "inc/main.scss";

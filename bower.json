@@ -1,7 +1,8 @@
+//Once you’ve got your bower.json file set up you can simply execute the bower install command to install all of the packages you have specified.
 {
-  "name": "KDX",
+  "name": "starter",
   "authors": [
-    "Natalie <fn@kodix.ru>"
+    "Ely <ugrumiy@gmail.com>"
   ],
   "description": "",
   "main": "",
