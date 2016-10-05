@@ -14,9 +14,8 @@ var gulp        = require('gulp'),
     fileinclude = require('gulp-file-include'),
     uglify      = require('gulp-uglify'),
     concat      = require('gulp-concat'), //concat слепливает в неправ. порядке
-    //imagemin    = require('gulp-imagemin'),
+    imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
-   // rimraf      = require('rimraf'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload,
     plumber     = require('gulp-plumber'),
@@ -60,7 +59,6 @@ var path = {
         temp: 'src/temp/**/*.*',
         sprite_svg: 'src/resources/sprite/*.svg'
     },
-    //clean: './build'
 };
 
 
@@ -160,12 +158,12 @@ gulp.task('fonts:build', function() {
 // Задачи для картинок
 gulp.task('image:build', function () {
     return gulp.src(path.src.img) //Выберем наши картинки
-       /*.pipe(imagemin({ //Сожмем их
+       .pipe(imagemin({ //Сожмем их
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
-        }))*/
+        }))
         .pipe(gulp.dest(path.build.img)) //И бросим в build
         .pipe(reload({stream: true}));
 });
@@ -247,14 +245,6 @@ var config = {
 gulp.task('webserver', function () {
     browserSync(config);
 });
-
-
-
-// Задачи для очистки
-/*gulp.task('clean', function (cb) {
-    rimraf(path.clean, cb);
-});
-*/
 
 
 
