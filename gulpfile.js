@@ -8,9 +8,11 @@ var gulp        = require('gulp'),
     prefixer    = require('gulp-autoprefixer'),
     watch       = require('gulp-watch'),
     sass        = require('gulp-sass'),
+    cleanCSS    = require('gulp-clean-css'),
     svgstore    = require('gulp-svgstore'),
     sourcemaps  = require('gulp-sourcemaps'),
     fileinclude = require('gulp-file-include'),
+    uglify      = require('gulp-uglify'),
     concat      = require('gulp-concat'), //concat слепливает в неправ. порядке
     //imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
@@ -71,7 +73,7 @@ var path = {
 gulp.task('html:build', function () {
     return gulp.src(path.src.html) //Выберем файлы по нужному пути
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error %>") })) //ловим ошибки
-        .pipe(pug())
+        .pipe(pug({pretty: true})) //параметр отключает минификацию
         .pipe(plumber.stop())
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
@@ -86,6 +88,7 @@ gulp.task('js_libs:build', function () {
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error %>") })) //ловим ошибки
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
         .pipe(fileinclude()) //склеим файлы
+        .pipe(uglify()) //минификация
         .pipe(sourcemaps.write('.')) //Пропишем карты
         .pipe(plumber.stop())
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
@@ -100,6 +103,7 @@ gulp.task('js_custom:build', function () {
         .pipe(babel({
             presets: ['es2015']
         })) //прогоним через babel
+        //.pipe(uglify()) минификация
         .pipe(sourcemaps.write('.')) //Пропишем карты
         .pipe(plumber.stop())
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
@@ -122,6 +126,7 @@ gulp.task('style_libs:build', function () {
     return gulp.src(path.src.style_libs) 
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error %>") }))
         .pipe(fileinclude())
+        .pipe(cleanCSS())
         .pipe(plumber.stop())
         .pipe(gulp.dest(path.build.style)) //И в build
         .pipe(reload({stream: true}));
@@ -132,7 +137,7 @@ gulp.task('style:build', function () {
     return gulp.src(path.src.style) //Выберем наш style.scss
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error %>") }))
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        .pipe(sass()) //Скомпилируем sass
+        .pipe(sass({outputStyle: 'compressed'})) //Скомпилируем sass параметр - минификация
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(sourcemaps.write('.'))
         .pipe(plumber.stop())
