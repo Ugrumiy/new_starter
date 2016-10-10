@@ -38,3 +38,39 @@ q {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+button {
+  padding: 0;
+  background: none;
+  border: none; }
+
+button,
+input,
+textarea,
+[tabindex] {
+  outline: 0; }
+
+input,
+textarea,
+select {
+  border-radius: 0;
+  -webkit-appearance: none; }
+
+input[type='number'] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;}}
+
+svg {
+  vertical-align: middle;}
+
+img {
+  max-width: 100%;}
+
+picture>* {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;}
