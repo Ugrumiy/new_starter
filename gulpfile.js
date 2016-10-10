@@ -236,7 +236,7 @@ var config = {
     tunnel: false,
     host: 'localhost',
     port: 9000,
-    logPrefix: "Frontend_Devil"
+    logPrefix: "Ely_Serv"
 };
 
 

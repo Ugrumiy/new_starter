@@ -2,6 +2,6 @@
 добавить через gulp-file-include
 пути к css файлам плагинов из bowera
 
-Собака include('../../../bower_components/normalize.css/normalize.css')
+Собака include('../../../node_moudules/normalize.css/normalize.css')
 
 */
