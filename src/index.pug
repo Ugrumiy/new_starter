@@ -1,12 +1,10 @@
-doctype html
-html(lang="en")
-	include ./inc_templates/head.pug
-	include ./inc_templates/mixin.pug
-	<body>
-	h1 Hello World
-	p.
-		I'm fine thank you.And you? 
-		I heard you fell into a lake?That's rather unfortunate. 
-		I hate it when my shoes get <a href="#">wet</a>.
+extend inc_templates/page
 
-	include ./inc_templates/body_closing.pug
+block title 
+	title Hello world title
+block content
+	h1 Hello World
+	p dsadsdsdasd
+block body_closing_scripts
+	script(src="resources/js/libs.js")
+	script(src="resources/js/main.js")
