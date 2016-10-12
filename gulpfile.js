@@ -226,24 +226,17 @@ gulp.task('watch', function(){
 
 
 
-
-
-// сервер Browser-Sync
-var config = {
-    server: {
-        baseDir: "./build"
-    },
-    tunnel: false,
-    host: 'localhost',
-    port: 9000,
-    logPrefix: "Ely_Serv"
-};
-
-
-
 // задача запускает сервер
 gulp.task('webserver', function () {
-    browserSync(config);
+    browserSync({
+        server: {
+            baseDir: "./build"
+        },
+        tunnel: false,
+        host: 'localhost',
+        port: 9000,
+        logPrefix: "Ely_Serv"
+    });
 });
 
 
