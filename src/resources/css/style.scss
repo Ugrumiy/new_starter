@@ -1,11 +1,10 @@
 //sass import
-@import "inc/mixins.scss";
+@import "inc/mixins-default.scss";
+@import "inc/mixins-project.scss";
+@import "inc/placeholder_classes.scss";
 @import "inc/mquery-mixins.scss";
 @import "inc/reset.scss";
 
-//@import "inc/grid.scss";
-
-@import "inc/helper_classes.scss";  //layout classes
 
 @import "inc/variables.scss";		//variables
 
