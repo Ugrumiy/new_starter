@@ -19,6 +19,8 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload,
     plumber     = require('gulp-plumber'),
+    gulpif = require('gulp-if'),
+    emitty = require('emitty').setup('src', 'pug'),
     notify      = require('gulp-notify'), // Уведомления об ошибках
     babel       = require('gulp-babel');
 
@@ -70,6 +72,7 @@ var path = {
 // Задачи для HTML
 gulp.task('html:build', function () {
     return gulp.src(path.src.html) //Выберем файлы по нужному пути
+        .pipe(emitty.stream(global.emittyChangedFile))
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error %>") })) //ловим ошибки
         .pipe(pug({pretty: true})) //параметр отключает минификацию
         .pipe(plumber.stop())
@@ -191,7 +194,7 @@ gulp.task('sprite_svg:build', function() {
 
 
 // задача для запуска сборки
-gulp.task('build', [
+gulp.task('build', gulp.parallel([
     'html:build',
     'js_libs:build',
     'js_custom:build',
@@ -202,26 +205,30 @@ gulp.task('build', [
     'image:build',
     'temp:build',
     'sprite_svg:build'
-]);
+]));
 
 
 // Задача watch
 gulp.task('watch', function(){
-    gulp.watch( path.watch.html, ['html:build'] );
+    global.watch = true;
+    gulp.watch( path.watch.html, gulp.series('html:build')).on('all', (event, filepath) => {
+            global.emittyChangedFile = filepath;
+            console.log(emitty.storage());
+        });
 
-    gulp.watch( path.watch.style, ['style:build', 'style_libs:build' ] );
+    gulp.watch( path.watch.style, gulp.parallel('style:build', 'style_libs:build'));
 
-    gulp.watch( path.watch.js_libs, ['js_libs:build'] );
-    gulp.watch( path.watch.js_custom, ['js_custom:build'] );
-    gulp.watch( path.watch.js_app, ['js_app:build'] );
+    gulp.watch( path.watch.js_libs, gulp.series('js_libs:build'));
+    gulp.watch( path.watch.js_custom, gulp.series('js_custom:build'));
+    gulp.watch( path.watch.js_app, gulp.series('js_app:build'));
 
-    gulp.watch( path.watch.fonts, ['fonts:build'] );
+    gulp.watch( path.watch.fonts, gulp.series('fonts:build'));
 
-    gulp.watch( path.watch.img, ['image:build'] );
+    gulp.watch( path.watch.img, gulp.series('image:build'));
 
-    gulp.watch( path.watch.temp, ['temp:build'] );
+    gulp.watch( path.watch.temp, gulp.series('temp:build'));
 
-    gulp.watch( path.watch.sprite_svg, ['sprite_svg:build'] );
+    gulp.watch( path.watch.sprite_svg, gulp.series('sprite_svg:build'));
 });
 
 
@@ -242,6 +249,4 @@ gulp.task('webserver', function () {
 
 
 // Задача по умолчанию
-gulp.task('default', ['build', 'webserver', 'watch']);
-
-
+gulp.task('default', gulp.series( 'build', gulp.parallel('webserver', 'watch')));
